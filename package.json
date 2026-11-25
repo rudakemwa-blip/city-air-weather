@@ -1,0 +1,11 @@
+{
+  "name": "city-air-weather",
+  "version": "1.0.0",
+  "description": "Compare weather and air quality across cities using OpenWeatherMap.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

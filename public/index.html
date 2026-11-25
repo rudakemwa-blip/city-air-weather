@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>City Air &amp; Weather Compare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>City Air &amp; Weather Compare</h1>
+    <p>Add cities, then compare temperature, humidity and air quality side by side.</p>
+  </header>
+
+  <main>
+    <form id="search-form" autocomplete="off">
+      <input id="city-input" type="text" placeholder="Type a city, e.g. Kigali" maxlength="60" aria-label="City name">
+      <button id="add-btn" type="submit">Add city</button>
+    </form>
+
+    <div id="banner" class="banner hidden" role="alert"></div>
+
+    <section class="controls">
+      <label>Sort by
+        <select id="sort">
+          <option value="added">Order added</option>
+          <option value="temp-desc">Temperature (hot to cold)</option>
+          <option value="temp-asc">Temperature (cold to hot)</option>
+          <option value="humidity-desc">Humidity (high to low)</option>
+          <option value="aqi-asc">Air quality (best first)</option>
+          <option value="aqi-desc">Air quality (worst first)</option>
+          <option value="name">Name (A-Z)</option>
+        </select>
+      </label>
+      <label>Min temp (&deg;C)
+        <input id="min-temp" type="number" placeholder="any" step="1">
+      </label>
+      <label>Search added
+        <input id="text-filter" type="text" placeholder="filter by name">
+      </label>
+      <button id="clear-btn" type="button" class="secondary">Clear all</button>
+    </section>
+
+    <div id="spinner" class="spinner hidden" aria-label="Loading"></div>
+    <div id="empty" class="empty">No cities yet. Add one above to get started.</div>
+    <section id="cards" class="cards"></section>
+  </main>
+
+  <footer>
+    Data: <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a>
+    &middot; Served by: <span id="backend">-</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

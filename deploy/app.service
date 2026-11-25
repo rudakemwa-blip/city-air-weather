@@ -1,0 +1,15 @@
+[Unit]
+Description=City Air & Weather Compare
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/app
+EnvironmentFile=/var/www/app/.env
+ExecStart=/usr/bin/node /var/www/app/server.js
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
