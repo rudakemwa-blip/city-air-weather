@@ -2,8 +2,8 @@
 
 A web app that lets you add several cities and compare **temperature, humidity, wind and air quality (AQI)** side by side. Useful for choosing where to travel, run outdoors, or simply checking whether the air is safe to breathe. Deployed on two web servers behind a load balancer.
 
-- **Demo video (max 2 min):** <PASTE_VIDEO_LINK>
-- **Deployed site (load balancer):** http://<LB01_IP_OR_DOMAIN>
+- **Demo video (max 2 min):** <>
+- **Deployed site (load balancer):** http://<http://3.8.122.59/>
 - **Login:** none required
 
 ## Features
@@ -72,4 +72,4 @@ Expected: the two web server addresses alternate. In the browser the footer ("Se
 ## Credits
 - [OpenWeatherMap](https://openweathermap.org/) for the weather, geocoding and air pollution APIs and icons
 - [Nginx](https://nginx.org/) and [Node.js](https://nodejs.org/)
-- Built with assistance from Claude Code (Anthropic)
+-
